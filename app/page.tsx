@@ -150,7 +150,7 @@ export default function Home() {
                 <Button asChild>
                   <a href="#projects">View Projects</a>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild className="bg-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900">
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
@@ -187,7 +187,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <div className="flex justify-between w-full">
-                      <Button asChild variant="outline" size="sm">
+                      <Button asChild className="bg-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900" size="sm">
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                           <Github className="mr-2 h-4 w-4" /> GitHub
                         </a>
