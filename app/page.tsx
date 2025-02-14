@@ -132,9 +132,9 @@ export default function Home() {
 
       <main className="container mx-auto px-10 md:px-8 lg:px-16 xl:px-40 space-y-16 md:space-y-32">
         <AnimatedSection>
-          <section id="home" className="flex flex-col lg:flex lg:flex-row sm:grid sm:grid-rows-2 w-full py-28 gap-16 lg:py-48 lg:gap-40 items-center justify-center">
+          <section id="home" className="flex flex-col lg:flex lg:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-16 lg:py-48 lg:gap-40 items-center justify-center">
             <div className="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
-              <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 border-gray-200 shadow-lg shadow-gray-400 object-cover"/>
+              <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 border-gray-200 shadow-xs shadow-gray-400 object-cover"/>
             </div>
             <div className="max-w-lg text-center lg:text-left">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">
