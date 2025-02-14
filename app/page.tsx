@@ -12,6 +12,7 @@ import ToggleTheme from "@/components/toggle-theme"
 import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { Github, Globe, Menu } from "lucide-react"
 import ContactForm from "@/components/ContactForm"
+import { skills } from "@/app/typescript/skills"
 
 const fadeVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -118,7 +119,7 @@ export default function Home() {
           </Button>
           <ul
             className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:relative top-full left-0 right-0 bg-background md:bg-transparent p-4 md:p-0 gap-4 md:gap-5`}>
-            {["Home", "Projects", "Experience", "Contact"].map((item) => (
+            {["Home", "Projects", "Skills", "Experience", "Contact"].map((item) => (
               <li key={item}>
                 <a href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-primary" onClick={() => setMenuOpen(false)}>
                   {item}
@@ -126,7 +127,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <ToggleTheme />
+          <div>
+            <ToggleTheme />
+          </div>
         </nav>
       </header>
 
@@ -204,6 +207,27 @@ export default function Home() {
             </div>
           </section>
         </AnimatedSection>
+
+        <AnimatedSection>
+          <section id="skills" className="py-16">
+            <h2 className="text-2xl md:text-3xl font-bold my-6">Skills</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {skills.map((skill, index) => (
+                <Card key={index} className="flex flex-col items-center p-4">
+                  <CardHeader className="flex flex-col items-center">
+                    <div className="w-12 h-12 mb-2">
+                      <Image src={skill.icon} alt={skill.name} width={48} height={48} />
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardTitle className="text-center">{skill.name}</CardTitle>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
+
 
         <AnimatedSection>
           <section id="experience" className="py-16">
