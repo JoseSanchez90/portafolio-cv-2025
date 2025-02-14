@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { motion, useAnimation, useInView } from "framer-motion"
 import AnimatedSpecialties from "@/components/AnimatedSpecialties"
 import Perfil from "../public/app/img/perfil.png"
@@ -23,18 +21,31 @@ const fadeVariants = {
 function AnimatedSection({ children }: { children: ReactNode }) {
   const controls = useAnimation()
   const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.3, once: false })
+  // Detecta si el ancho es menor a 768px (modo celular)
+  const [isMobile, setIsMobile] = useState(false)
+  const isInView = useInView(ref, { amount: 0.3, once: isMobile })
 
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible")
-    } else {
-      controls.start("hidden")
-    }
-  }, [controls, isInView])
+useEffect(() => {
+  const checkScreenSize = () => {
+    setIsMobile(window.innerWidth < 768) // Ajusta según el breakpoint que uses
+  }
+
+  checkScreenSize() // Ejecutar al cargar la página
+  window.addEventListener("resize", checkScreenSize) // Escuchar cambios de tamaño
+
+  return () => window.removeEventListener("resize", checkScreenSize) // Cleanup
+}, [])
+
+useEffect(() => {
+  if (isInView) {
+    controls.start("visible")
+  } else if (!isMobile) {
+    controls.start("hidden")
+  }
+}, [controls, isInView, isMobile])
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={fadeVariants} transition={{ duration: 0.5 }}>
+    <motion.div ref={ref} initial="hidden" animate={controls} variants={fadeVariants} transition={{ duration: 0.8 }}>
       {children}
     </motion.div>
   )
