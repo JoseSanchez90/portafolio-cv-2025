@@ -5,8 +5,9 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: "All fields are required" }, { status: 400 });
+    // Verifica que las variables están definidas
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      throw new Error("Missing email credentials")
     }
 
     const transporter = nodemailer.createTransport({
@@ -16,6 +17,14 @@ export async function POST(req: Request) {
         pass: process.env.EMAIL_PASS, // Contraseña o App Password
       },
     });
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: "tuemail@ejemplo.com",
+      subject: `Mensaje de ${name}`,
+      text: message,
+      replyTo: email,
+    })
 
     const mailOptions = {
       from: `"${name}" <${email}>`, // Aquí se usa el email del remitente
@@ -30,6 +39,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json({ error: "Error sending email" }, { status: 500 });
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
