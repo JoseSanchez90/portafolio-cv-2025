@@ -13,6 +13,7 @@ import Perfil from "../public/app/img/perfil.png"
 import ToggleTheme from "@/components/toggle-theme"
 import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { Github, Globe, Menu } from "lucide-react"
+import ContactForm from "@/components/ContactForm"
 
 const fadeVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -246,38 +247,12 @@ export default function Home() {
         </AnimatedSection>
 
         <AnimatedSection>
-          <section id="contact" className="py-10 max-w-md mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Contact Me</h2>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
-                  Name
-                </label>
-                <Input id="name" placeholder="Your name" />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
-                  Email
-                </label>
-                <Input id="email" type="email" placeholder="your@email.com" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
-                  Message
-                </label>
-                <Textarea id="message" placeholder="Your message" rows={5} className="resize-none" />
-              </div>
-              <Button type="submit" className="w-full">
-                Send Message
-              </Button>
-            </form>
-          </section>
+          <ContactForm/>
         </AnimatedSection>
       </main>
       
       <footer className="w-full border-t py-4 mt-32 lg:mt-10 text-center text-sm bg-background/80 backdrop-blur-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} Jose Sanchez. All rights reserved.</p>
-        <p>Perú, Lima</p>
+        © {new Date().getFullYear()} Jose Sanchez. All rights reserved. | Perú, Lima
       </footer>
     </div>
   )
