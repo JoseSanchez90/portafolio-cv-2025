@@ -265,7 +265,7 @@ export default function Home() {
 
               {[
                 {
-                  title: "Software Technician",
+                  title: "Software Support",
                   company: "IntelliPOS",
                   period: "June 2024 - Present",
                   description: "Work as software support for the Aloha system for retail stores and restaurants.",
