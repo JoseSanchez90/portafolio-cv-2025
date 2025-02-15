@@ -101,6 +101,33 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="background">
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+        <span className="bkg"></span>
+      </div>
       <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 md:px-20 xl:px-40">
           <div className="flex flex-row justify-center gap-5">
@@ -135,16 +162,16 @@ export default function Home() {
 
       <main className="container mx-auto px-10 md:px-8 lg:px-16 xl:px-40 space-y-16 md:space-y-32">
         <AnimatedSection>
-          <section id="home" className="flex flex-col lg:flex lg:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-16 lg:py-48 lg:gap-40 items-center justify-center">
+          <section id="home" className="flex flex-col lg:flex lg:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-8 md:gap-16 lg:py-48 lg:gap-40 items-center justify-center">
             <div className="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
               <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 border-gray-200 shadow-xs shadow-gray-400 object-cover"/>
             </div>
             <div className="max-w-lg text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                My name is <span className="text-gray-500">Jose Sanchez</span>
+              <h1 className="flex flex-col lg:flex-row lg:gap-3 text-3xl md:text-4xl font-bold mb-4">
+                My name is<span className="text-green-600 dark:text-green-400">Jose Sanchez</span>
               </h1>
               <AnimatedSpecialties />
-              <p className="text-sm md:text-base text-muted-foreground mb-6">
+              <p className="text-sm md:text-base text-black dark:text-white foreground mb-6">
                 My experience is based on constant practice and carrying out projects using technologies such as HTML5,
                 CSS3, JavaScript and ReactJS, libraries as well as Bootstrap and Tailwind. I create quality experiences
                 and I am always looking for new challenges to learn and grow professionally.

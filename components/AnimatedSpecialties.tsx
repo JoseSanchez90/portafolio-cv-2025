@@ -44,7 +44,7 @@ const AnimatedSpecialties: React.FC = () => {
   }, [page, paginate]) // Added paginate to dependencies
 
   return (
-    <div className="relative h-16 overflow-hidden">
+    <div className="relative h-16 overflow-hidden flex justify-center lg:justify-start">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
