@@ -98,6 +98,18 @@ const projects = [
 export default function Home() {
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -128,6 +140,8 @@ export default function Home() {
         <span className="bkg"></span>
         <span className="bkg"></span>
       </div>
+
+      {/* NAVBAR */}
       <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 md:px-20 xl:px-40">
           <div className="flex flex-row justify-center gap-5">
@@ -161,6 +175,8 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-10 md:px-8 lg:px-16 xl:px-40 space-y-16 md:space-y-32">
+
+        {/* PERFIL */}
         <AnimatedSection>
           <section id="home" className="flex flex-col lg:flex lg:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-8 md:gap-16 lg:py-48 lg:gap-40 items-center justify-center">
             <div className="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
@@ -188,16 +204,17 @@ export default function Home() {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
+        {/* PROYECTOS */}
+        {isMobile ? (
           <section id="projects" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold my-6">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
               {projects.map((project, index) => (
                 <Card key={index} className="flex flex-col">
                   <CardHeader>
                     <div className="relative w-full h-48 mb-4">
                       <Image
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image}
                         alt={project.title}
                         fill
                         className="object-cover rounded-t-lg hover:scale-105 transition-all duration-150"
@@ -233,8 +250,56 @@ export default function Home() {
               ))}
             </div>
           </section>
-        </AnimatedSection>
+          ) : (
+            <AnimatedSection>
+              <section id="projects" className="py-16">
+                <h2 className="text-2xl md:text-3xl font-bold my-6">My Projects</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+                  {projects.map((project, index) => (
+                    <Card key={index} className="flex flex-col">
+                      <CardHeader>
+                        <div className="relative w-full h-48 mb-4">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover rounded-t-lg hover:scale-105 transition-all duration-150"
+                          />
+                        </div>
+                      </CardHeader>
+                      <CardContent className="flex flex-col gap-4">
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardDescription className="h-10">{project.description}</CardDescription>
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {project.technologies.map((tech, i) => (
+                            <span key={i} className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                      <CardFooter className="mt-auto">
+                        <div className="flex justify-between w-full">
+                          <Button asChild className="bg-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900" size="sm">
+                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                              <Github className="mr-2 h-4 w-4" /> GitHub
+                            </a>
+                          </Button>
+                          <Button asChild size="sm">
+                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                              <Globe className="mr-2 h-4 w-4" /> Live Demo
+                            </a>
+                          </Button>
+                        </div>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+            </AnimatedSection>
+          )}
 
+        {/* HABILIDADES */}
         <AnimatedSection>
           <section id="skills" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold my-6">Skills</h2>
@@ -256,6 +321,7 @@ export default function Home() {
         </AnimatedSection>
 
 
+        {/* EXPERIENCIA LABORAL */}
         <AnimatedSection>
           <section id="experience" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Work Experience</h2>
@@ -308,11 +374,13 @@ export default function Home() {
           </section>
         </AnimatedSection>
 
+        {/* CONTACTO */}
         <AnimatedSection>
           <ContactForm/>
         </AnimatedSection>
       </main>
       
+      {/* PIE DE PAGINA */}
       <footer className="w-full border-t py-4 mt-32 lg:mt-10 text-center text-sm bg-background/80 backdrop-blur-sm text-muted-foreground">
         © {new Date().getFullYear()} Jose Sanchez. All rights reserved. | Perú, Lima
       </footer>
