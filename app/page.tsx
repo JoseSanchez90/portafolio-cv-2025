@@ -194,10 +194,10 @@ export default function Home() {
                 and I am always looking for new challenges to learn and grow professionally.
               </p>
               <div className="space-x-4">
-                <Button asChild>
+                <Button asChild className="border-2 border-black hover:bg-white hover:text-black">
                   <a href="#projects">View Projects</a>
                 </Button>
-                <Button asChild className="bg-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900">
+                <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900">
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
