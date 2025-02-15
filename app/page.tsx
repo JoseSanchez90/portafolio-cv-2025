@@ -132,7 +132,7 @@ export default function Home() {
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 md:px-20 xl:px-40">
           <div className="flex flex-row justify-center gap-5">
             <a href="https://www.linkedin.com/in/josesanchez90/" target="_blank" rel="noreferrer">
-              <FaLinkedin className="h-5 w-5 text-blue-800" />
+              <FaLinkedin className="h-5 w-5 text-blue-600" />
             </a>
             <a href="https://www.facebook.com/angel.sanchez.tr/" target="_blank" rel="noreferrer">
               <FaFacebook className="h-5 w-5 text-blue-500" />
