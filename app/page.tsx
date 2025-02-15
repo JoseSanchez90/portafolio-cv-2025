@@ -112,8 +112,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="background">
+    <>
+    <div className="background">
         <span className="bkg"></span>
         <span className="bkg"></span>
         <span className="bkg"></span>
@@ -140,6 +140,7 @@ export default function Home() {
         <span className="bkg"></span>
         <span className="bkg"></span>
       </div>
+    <div className="flex flex-col items-center justify-center min-h-screen relative">
 
       {/* NAVBAR */}
       <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
@@ -234,7 +235,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <div className="flex justify-between w-full">
-                      <Button asChild className="bg-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900" size="sm">
+                      <Button asChild size="sm">
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                           <Github className="mr-2 h-4 w-4" /> GitHub
                         </a>
@@ -385,5 +386,6 @@ export default function Home() {
         © {new Date().getFullYear()} Jose Sanchez. All rights reserved. | Perú, Lima
       </footer>
     </div>
+    </>
   )
 }
