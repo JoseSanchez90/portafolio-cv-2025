@@ -194,10 +194,10 @@ export default function Home() {
                 and I am always looking for new challenges to learn and grow professionally.
               </p>
               <div className="space-x-4">
-                <Button asChild className="border-2 border-black hover:bg-white hover:text-black">
+                <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white">
                   <a href="#projects">View Projects</a>
                 </Button>
-                <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900">
+                <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black">
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
@@ -235,12 +235,12 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <div className="flex justify-between w-full">
-                      <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900" size="sm">
+                      <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black" size="sm">
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                           <Github className="mr-2 h-4 w-4" /> GitHub
                         </a>
                       </Button>
-                      <Button asChild className="border-2 border-black hover:bg-white hover:text-black" size="sm">
+                      <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                           <Globe className="mr-2 h-4 w-4" /> Live Demo
                         </a>
@@ -281,12 +281,12 @@ export default function Home() {
                       </CardContent>
                       <CardFooter className="mt-auto">
                         <div className="flex justify-between w-full">
-                          <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-gray-900" size="sm">
+                          <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black" size="sm">
                             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                               <Github className="mr-2 h-4 w-4" /> GitHub
                             </a>
                           </Button>
-                          <Button asChild className="border-2 border-black hover:bg-white hover:text-black" size="sm">
+                          <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
                             <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                               <Globe className="mr-2 h-4 w-4" /> Live Demo
                             </a>
