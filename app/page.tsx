@@ -9,10 +9,11 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import AnimatedSpecialties from "@/components/AnimatedSpecialties"
 import Perfil from "../public/app/img/perfil.png"
 import ToggleTheme from "@/components/toggle-theme"
-import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { Github, Globe, Menu } from "lucide-react"
 import ContactForm from "@/components/ContactForm"
 import { skills } from "@/app/typescript/skills"
+import { BsFacebook, BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const fadeVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -145,17 +146,49 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 md:px-20 xl:px-40">
-          <div className="flex flex-row justify-center gap-5">
-            <a href="https://www.linkedin.com/in/josesanchez90/" target="_blank" rel="noreferrer">
-              <FaLinkedin className="h-5 w-5 text-blue-600" />
-            </a>
-            <a href="https://www.facebook.com/angel.sanchez.tr/" target="_blank" rel="noreferrer">
-              <FaFacebook className="h-5 w-5 text-blue-500" />
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=51960041583" target="_blank" rel="noreferrer">
-              <FaWhatsapp className="h-5 w-5 text-green-500" />
-            </a>
-          </div>
+          <TooltipProvider>
+            <div className="flex flex-row justify-center gap-5">
+              {/* GitHub */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="https://github.com/JoseSanchez90" target="_blank" rel="noreferrer">
+                    <BsGithub className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top">GitHub</TooltipContent>
+              </Tooltip>
+
+              {/* LinkedIn */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="https://www.linkedin.com/in/josesanchez90/" target="_blank" rel="noreferrer">
+                    <BsLinkedin className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top">LinkedIn</TooltipContent>
+              </Tooltip>
+
+              {/* Facebook */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="https://www.facebook.com/angel.sanchez.tr/" target="_blank" rel="noreferrer">
+                    <BsFacebook className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top">Facebook</TooltipContent>
+              </Tooltip>
+
+              {/* WhatsApp */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="https://api.whatsapp.com/send?phone=51960041583" target="_blank" rel="noreferrer">
+                    <BsWhatsapp className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top">WhatsApp</TooltipContent>
+              </Tooltip>
+            </div>
+          </TooltipProvider>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             <Menu className="h-6 w-6" />
           </Button>
@@ -169,9 +202,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <div>
-            <ToggleTheme />
-          </div>
+          <ToggleTheme />
         </nav>
       </header>
 
