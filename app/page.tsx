@@ -290,12 +290,12 @@ export default function Home() {
                   {projects.map((project, index) => (
                     <Card key={index} className="flex flex-col">
                       <CardHeader>
-                        <div className="relative w-full h-48 mb-4">
+                        <div className="relative w-full h-48 mb-4 overflow-hidden rounded-t-lg">
                           <Image
                             src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover rounded-t-lg hover:scale-105 transition-all duration-150"
+                            className="object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                           />
                         </div>
                       </CardHeader>
