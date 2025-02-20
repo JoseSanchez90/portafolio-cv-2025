@@ -17,8 +17,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Google Analytics */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TBXRS3FE3N"/>
-        <Script>
+        <Script strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-TBXRS3FE3N`}/>
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
