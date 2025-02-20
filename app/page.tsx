@@ -56,7 +56,7 @@ useEffect(() => {
 const projects = [
   {
     title: "Store Gamer",
-    description: "Personal internship for gamer store.",
+    description: "Personal internship for gamer store. You can enter with the user: admin@admin.com and password: admin123456, to enter the dashboard (add, edit and delete products).",
     image: "/app/img/store-gamer.png",
     technologies: ["React.js", "Tailwind CSS", "JavaScript", "Firebase"],
     githubLink: "https://github.com/JoseSanchez90/ProyectoFinal-Curso-Frontend",
@@ -206,7 +206,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="container mx-auto px-10 md:px-8 lg:px-16 xl:px-40 space-y-16 md:space-y-32">
+      <main className="container mx-auto px-10 md:px-8 lg:px-16 xl:px-20 2xl:px-40 space-y-16 md:space-y-32">
 
         {/* PERFIL */}
         <AnimatedSection>
@@ -255,7 +255,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4">
                     <CardTitle>{project.title}</CardTitle>
-                    <CardDescription className="h-10">{project.description}</CardDescription>
+                    <CardDescription className="h-20">{project.description}</CardDescription>
                     <div className="flex flex-wrap gap-2 mt-4">
                       {project.technologies.map((tech, i) => (
                         <span key={i} className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
@@ -301,7 +301,7 @@ export default function Home() {
                       </CardHeader>
                       <CardContent className="flex flex-col gap-4">
                         <CardTitle>{project.title}</CardTitle>
-                        <CardDescription className="h-10">{project.description}</CardDescription>
+                        <CardDescription className="h-16">{project.description}</CardDescription>
                         <div className="flex flex-wrap gap-2 mt-4">
                           {project.technologies.map((tech, i) => (
                             <span key={i} className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
