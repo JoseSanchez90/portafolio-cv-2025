@@ -153,7 +153,7 @@ export default function Home() {
 
       {/* NAVBAR */}
       <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
-        <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 md:px-20 xl:px-40">
+        <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 xl:px-40">
           <TooltipProvider>
             <div className="flex flex-row justify-center gap-5">
               {/* GitHub */}
@@ -347,7 +347,7 @@ export default function Home() {
               {skills.map((skill, index) => (
                 <Card key={index} className="flex flex-col items-center p-4">
                   <CardHeader className="flex flex-col items-center">
-                    <div className="w-12 h-12 mb-2">
+                    <div className="w-12 h-12 mb-2 lg:hover:scale-150 transition-all duration-300">
                       <Image src={skill.icon} alt={skill.name} width={48} height={48} />
                     </div>
                   </CardHeader>
