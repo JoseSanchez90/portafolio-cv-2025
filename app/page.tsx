@@ -94,6 +94,14 @@ const projects = [
     githubLink: "https://github.com/JoseSanchez90/To-Do-List",
     liveLink: "https://to-do-list-josesanchez.vercel.app/",
   },
+  {
+    title: "Password Generator",
+    description: "personal practice to make a password generator.",
+    image: "/app/img/password.png",
+    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/JoseSanchez90/passwordgenerator",
+    liveLink: "https://passwordgenerator.up.railway.app/",
+  },
 ]
 
 export default function Home() {
@@ -413,7 +421,7 @@ export default function Home() {
       </main>
       
       {/* PIE DE PAGINA */}
-      <footer className="w-full border-t py-4 mt-32 lg:mt-10 text-center text-sm bg-background/80 backdrop-blur-sm text-muted-foreground">
+      <footer className="w-full border-t py-2 mt-32 lg:mt-10 text-center text-sm bg-background/80 backdrop-blur-sm text-muted-foreground">
         © {new Date().getFullYear()} Jose Sanchez. All rights reserved. | Perú, Lima
       </footer>
     </div>

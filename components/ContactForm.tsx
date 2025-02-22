@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-      <section id="contact" className="py-10 max-w-md mx-auto">
+      <section id="contact" className="py-8 max-w-md mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Contact Me</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
