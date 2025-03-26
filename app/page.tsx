@@ -152,7 +152,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen relative">
 
       {/* NAVBAR */}
-      <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
+      <header className="w-screen bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 xl:px-40">
           <TooltipProvider>
             <div className="flex flex-row justify-center gap-5">
