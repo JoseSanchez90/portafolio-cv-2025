@@ -71,8 +71,8 @@ const projects = [
     liveLink: "https://furniro-ashy.vercel.app/",
   },
   {
-    title: "Table Water",
-    description: "Store selling ozonated table water.",
+    title: "Eufrosine Company",
+    description: "Website created for a small table water company called Eufrosine.",
     image: "/app/img/eufrosine.png",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn/ui", "React Icons", "Lottie", "Motion.dev"],
     githubLink: "https://github.com/JoseSanchez90/frontend-eufrosine-web",
@@ -104,11 +104,19 @@ const projects = [
   },
   {
     title: "Password Generator",
-    description: "personal practice to make a password generator.",
+    description: "Personal practice to make a password generator.",
     image: "/app/img/password.png",
     technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/JoseSanchez90/passwordgenerator",
     liveLink: "https://passwordgenerator.up.railway.app/",
+  },
+  {
+    title: "Dashboard Eufrosine",
+    description: "Sales panel project for a small table water company (this project is for my portfolio use). Please use it in moderation.",
+    image: "/app/img/eufrosine-image.png",
+    technologies: ["Next.js", "TypeScript", "HTML", "CSS", "Tailwdincss", "Shadcn/ui", "React Icons", "Lucide Icons", "PostgreSQL", "Prisma", "NextAuth.js", "Console Neon", "FullStack"],
+    // githubLink: "https://github.com/JoseSanchez90/eufrosine-dashboard.git",
+    liveLink: "https://eufrosinepanel.vercel.app/login",
   },
 ]
 
