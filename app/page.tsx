@@ -110,14 +110,14 @@ const projects = [
     githubLink: "https://github.com/JoseSanchez90/passwordgenerator",
     liveLink: "https://passwordgenerator.up.railway.app/",
   },
-  // {
-  //   title: "Dashboard Eufrosine",
-  //   description: "Sales panel project for a small table water company (this project is for my portfolio use). Email: administrador@empresa.com | Password: Admin1234$ | Please use it in moderation.",
-  //   image: "/app/img/eufrosine-image.png",
-  //   technologies: ["Next.js", "TypeScript", "HTML", "CSS", "Tailwdincss", "Shadcn/ui", "React Icons", "Lucide Icons", "PostgreSQL", "Prisma", "NextAuth.js", "Console Neon", "FullStack"],
-  //   githubLink: "https://github.com/JoseSanchez90/eufrosine-dashboard.git",
-  //   liveLink: "https://eufrosinepanel.vercel.app/login",
-  // },
+  {
+    title: "Dashboard Eufrosine",
+    description: "Sales panel project for a small table water company (this project is for my portfolio use). Email: administrador@empresa.com | Password: Admin$1234 | Please use it in moderation.",
+    image: "/app/img/eufrosine-image.png",
+    technologies: ["Next.js", "TypeScript", "HTML", "CSS", "Tailwdincss", "Shadcn/ui", "React Icons", "Lucide Icons", "PostgreSQL", "Prisma", "NextAuth.js", "Console Neon", "FullStack"],
+    githubLink: "https://github.com/JoseSanchez90/eufrosine-dashboard.git",
+    liveLink: "https://eufrosinepanel.vercel.app/login",
+  },
 ]
 
 export default function Home() {
