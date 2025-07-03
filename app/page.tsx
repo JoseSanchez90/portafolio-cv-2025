@@ -14,6 +14,7 @@ import ContactForm from "@/components/ContactForm"
 import { skills } from "@/app/typescript/skills"
 import { BsFacebook, BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import DownloadButton from "@/components/downloadButton"
 
 const fadeVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -193,14 +194,14 @@ export default function Home() {
               </Tooltip>
 
               {/* Facebook */}
-              <Tooltip>
+              {/* <Tooltip>
                 <TooltipTrigger asChild>
                   <a href="https://www.facebook.com/angel.sanchez.tr/" target="_blank" rel="noreferrer">
                     <BsFacebook className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent side="top">Facebook</TooltipContent>
-              </Tooltip>
+              </Tooltip> */}
 
               {/* WhatsApp */}
               <Tooltip>
@@ -249,9 +250,10 @@ export default function Home() {
                 and I am always looking for new challenges to learn and grow professionally.
               </p>
               <div className="space-x-4">
-                <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white">
+                {/* <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white">
                   <a href="#projects">View Projects</a>
-                </Button>
+                </Button> */}
+                <DownloadButton />
                 <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black">
                   <a href="#contact">Contact Me</a>
                 </Button>
