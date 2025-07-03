@@ -103,12 +103,12 @@ const projects = [
     liveLink: "https://to-do-list-josesanchez.vercel.app/",
   },
   {
-    title: "Password Generator",
-    description: "Personal practice to make a password generator.",
-    image: "/app/img/password.png",
-    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/JoseSanchez90/passwordgenerator",
-    liveLink: "https://passwordgenerator.up.railway.app/",
+    title: "Web Architecture",
+    description: "A demonstration website designed for an architect.",
+    image: "/app/img/arquitectura-web.png",
+    technologies: ["Next.js", "TypeScript", "HTML", "Tailwdincss", "Shadcn/ui"],
+    githubLink: "https://github.com/JoseSanchez90/proyecto-aquitectura",
+    liveLink: "https://mwtrazo.vercel.app/",
   },
   {
     title: "Dashboard Eufrosine",
@@ -279,7 +279,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4">
                     <CardTitle>{project.title}</CardTitle>
-                    <CardDescription className="h-20">{project.description}</CardDescription>
+                    <CardDescription className="h-28 md:h-20">{project.description}</CardDescription>
                     <div className="flex flex-wrap gap-2 mt-4">
                       {project.technologies.map((tech, i) => (
                         <span key={i} className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
@@ -297,7 +297,7 @@ export default function Home() {
                       </Button>
                       <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                          <Globe className="mr-2 h-4 w-4" /> Live Demo
+                          <Globe className="mr-2 h-4 w-4" /> Demo
                         </a>
                       </Button>
                     </div>
@@ -343,7 +343,7 @@ export default function Home() {
                           </Button>
                           <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
                             <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                              <Globe className="mr-2 h-4 w-4" /> Live Demo
+                              <Globe className="mr-2 h-4 w-4" /> Demo
                             </a>
                           </Button>
                         </div>
