@@ -193,16 +193,6 @@ export default function Home() {
                 <TooltipContent side="top">LinkedIn</TooltipContent>
               </Tooltip>
 
-              {/* Facebook */}
-              {/* <Tooltip>
-                <TooltipTrigger asChild>
-                  <a href="https://www.facebook.com/angel.sanchez.tr/" target="_blank" rel="noreferrer">
-                    <BsFacebook className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent side="top">Facebook</TooltipContent>
-              </Tooltip> */}
-
               {/* WhatsApp */}
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -237,7 +227,7 @@ export default function Home() {
         <AnimatedSection>
           <section id="home" className="flex flex-col xl:flex xl:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-8 md:gap-16 lg:py-48 lg:gap-40 items-center justify-center">
             <div className="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
-              <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 border-gray-200 shadow-xs shadow-gray-400 object-cover"/>
+              <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 dark:border-gray-200 border-gray-700 shadow-xs shadow-gray-400 object-cover"/>
             </div>
             <div className="max-w-lg text-center lg:text-left">
               <h1 className="flex flex-col lg:flex-row lg:gap-3 text-3xl md:text-4xl font-bold mb-4">
