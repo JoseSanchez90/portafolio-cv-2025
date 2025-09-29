@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 const DownloadButton: React.FC = () => {
 
     const handleDownload = () => {
-        const fileId = "15JX4nd-WzK0zRYJY4xmg_psixJqhpDPZ"
+        const fileId = "1ehSOKFdDXIBVyuM6ACQntajY4oKK7H9R"
         const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`
 
         const a = document.createElement("a")
