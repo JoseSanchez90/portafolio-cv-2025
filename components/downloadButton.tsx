@@ -20,8 +20,8 @@ const DownloadButton: React.FC = () => {
   return (
     <Button
         onClick={handleDownload}
-        className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white"
-    >Download CV
+        className="hover:bg-gray-700 dark:bg-white dark:hover:bg-gray-700 dark:hover:text-white "
+    >Descargar CV
 
     </Button>
   )

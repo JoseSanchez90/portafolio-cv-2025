@@ -40,29 +40,29 @@ export default function ContactForm() {
   };
 
   return (
-      <section id="contact" className="py-8 max-w-md mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Contact Me</h2>
+      <section id="contact" className="py-8 2xl:pt-20 2xl:pb-40 max-w-md mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Contactame</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name
+              Nombre
             </label>
-            <Input id="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
+            <Input id="name" value={formData.name} onChange={handleChange} placeholder="Nombre completo" required />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
+              Correo Electronico
             </label>
-            <Input id="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
+            <Input id="email" type="email" value={formData.email} onChange={handleChange} placeholder="tu@correo.com" required />
           </div>
           <div>
             <label htmlFor="message" className="block text-sm font-medium mb-1">
-              Message
+              Mensaje
             </label>
-            <Textarea id="message" value={formData.message} onChange={handleChange} placeholder="Your message" rows={5} className="resize-none" required />
+            <Textarea id="message" value={formData.message} onChange={handleChange} placeholder="Escribe tu mensaje" rows={5} className="resize-none" required />
           </div>
           <Button type="submit" className="w-full" disabled={status === "loading"}>
-            {status === "loading" ? "Sending..." : "Send Message"}
+            {status === "loading" ? "Enviando..." : "Enviar Mensaje"}
           </Button>
           {status === "success" && <p className="text-green-500">Message sent successfully!</p>}
           {status === "error" && <p className="text-red-500">Error sending message.</p>}

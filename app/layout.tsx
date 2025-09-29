@@ -9,12 +9,12 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Jose Sanchez",
-  description: "Personal portfolio showcasing projects and work experience",
+  description: "Portafolio personal que muestra proyectos y experiencia laboral",
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Google Analytics */}
         <Script strategy="afterInteractive"

@@ -2,9 +2,9 @@ import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const specialties = [
-  { text: "Software Support", color: "bg-red-500" },
-  { text: "Developer FrontEnd", color: "bg-blue-500" },
-  { text: "Specialist Help Desk", color: "bg-green-500" },
+  { text: "Soporte de Software", color: "bg-red-500" },
+  { text: "Desarrollador Frontend", color: "bg-blue-500" },
+  { text: "Especialista Help Desk", color: "bg-green-500" },
 ]
 
 const variants = {
