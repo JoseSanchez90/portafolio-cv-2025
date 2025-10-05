@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-      <section id="contact" className="py-8 2xl:pt-20 2xl:pb-40 max-w-md mx-auto">
+      <section id="contacto" className="py-8 2xl:pt-20 2xl:pb-40 max-w-md mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Contactame</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -64,8 +64,8 @@ export default function ContactForm() {
           <Button type="submit" className="w-full" disabled={status === "loading"}>
             {status === "loading" ? "Enviando..." : "Enviar Mensaje"}
           </Button>
-          {status === "success" && <p className="text-green-500">Message sent successfully!</p>}
-          {status === "error" && <p className="text-red-500">Error sending message.</p>}
+          {status === "success" && <p className="text-green-500">Mensaje enviado exitosamente!</p>}
+          {status === "error" && <p className="text-red-500">Error al enviar mensaje.</p>}
         </form>
       </section>
   );

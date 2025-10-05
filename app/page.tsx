@@ -171,7 +171,7 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="w-screen bg-background/80 backdrop-blur-sm fixed top-0 z-50 py-2">
         <nav className="container flex flex-row justify-between items-center mx-auto px-4 sm:px-10 xl:px-40">
-          <TooltipProvider>
+          <TooltipProvider delayDuration={0}>
             <div className="flex flex-row justify-center gap-5">
               {/* GitHub */}
               <Tooltip>
@@ -209,7 +209,7 @@ export default function Home() {
           </Button>
           <ul
             className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:relative top-full left-0 right-0 bg-background md:bg-transparent p-4 md:p-0 gap-4 md:gap-5`}>
-            {["Home", "Projects", "Skills", "Experience", "Contact"].map((item) => (
+            {["Inicio", "Proyectos", "Habilidades", "Experiencia", "Contacto"].map((item) => (
               <li key={item}>
                 <a href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-primary" onClick={() => setMenuOpen(false)}>
                   {item}
@@ -225,7 +225,7 @@ export default function Home() {
 
         {/* PERFIL */}
         <AnimatedSection>
-          <section id="home" className="flex flex-col xl:flex xl:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-8 md:gap-16 lg:py-48 lg:gap-40 items-center justify-center">
+          <section id="inicio" className="flex flex-col xl:flex xl:flex-row sm:grid sm:grid-rows-2 w-full py-20 gap-8 md:gap-16 lg:py-48 lg:gap-40 items-center justify-center">
             <div className="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
               <Image src={Perfil} alt="Jose" fill className="rounded-full border-2 dark:border-gray-200 border-gray-700 shadow-xs shadow-gray-400 object-cover"/>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
 
         {/* PROYECTOS */}
         {isMobile ? (
-          <section id="projects" className="py-16">
+          <section id="proyectos" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold my-6">Mis Proyectos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
               {projects.map((project, index) => (
@@ -298,7 +298,7 @@ export default function Home() {
           </section>
           ) : (
             <AnimatedSection>
-              <section id="projects" className="py-16">
+              <section id="proyectos" className="py-16">
                 <h2 className="text-2xl md:text-3xl font-bold my-6 text-center">Mis Proyectos</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
                   {projects.map((project, index) => (
@@ -347,7 +347,7 @@ export default function Home() {
 
         {/* HABILIDADES */}
         <AnimatedSection>
-          <section id="skills" className="py-16">
+          <section id="habilidades" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold my-6 text-center">Habilidades</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {skills.map((skill, index) => (
@@ -369,7 +369,7 @@ export default function Home() {
 
         {/* EXPERIENCIA LABORAL */}
         <AnimatedSection>
-          <section id="experience" className="py-16">
+          <section id="experiencia" className="py-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Experiencia Laboral</h2>
             <div className="relative max-w-4xl mx-auto">
               {/* Vertical line - visible on larger screens */}
