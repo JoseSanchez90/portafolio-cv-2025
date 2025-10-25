@@ -9,10 +9,10 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import AnimatedSpecialties from "@/components/AnimatedSpecialties"
 import Perfil from "../public/app/img/perfil.png"
 import ToggleTheme from "@/components/toggle-theme"
-import { Github, Globe, Menu } from "lucide-react"
+import { Globe, Menu } from "lucide-react"
 import ContactForm from "@/components/ContactForm"
 import { skills } from "@/app/typescript/skills"
-import { BsFacebook, BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs"
+import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import DownloadButton from "@/components/downloadButton"
 
@@ -56,26 +56,26 @@ useEffect(() => {
 
 const projects = [
   {
-    title: "Tienda Gamer",
-    description: "Práctica personal para una tienda gamer. Puedes ingresar con el usuario: admin@admin.com y la contraseña: admin123456, para acceder al panel (agregar, editar y eliminar productos).",
-    image: "/app/img/store-gamer.png",
-    technologies: ["React.js", "Tailwind CSS", "JavaScript", "Firebase"],
-    githubLink: "https://github.com/JoseSanchez90/ProyectoFinal-Curso-Frontend",
-    liveLink: "https://kazali-store-blue.vercel.app/",
+    title: "Mova Estudio - Arquitectura",
+    description: "Web informativa para un estudio de arquitectura enfocado en proyectos residenciales, remodelaciones e interiorismo, con un estilo moderno y minimalista.",
+    image: "/app/img/movaWeb.png",
+    technologies: ["Next.js", "Tailwind", "TypeScript", "Motion"],
+    githubLink: "https://github.com/JoseSanchez90/proyecto-mova",
+    liveLink: "https://mova-estudio.vercel.app/",
   },
   {
-    title: "Comercio de Muebles",
-    description: "Comercio de muebles, sillas y toda la decoración de interiores.",
-    image: "/app/img/forniture.png",
-    technologies: ["React.js", "Tailwind CSS", "JavaScript"],
-    githubLink: "https://github.com/JoseSanchez90/Ecommerce-Furniro",
-    liveLink: "https://furniro-ashy.vercel.app/",
+    title: "Muebles Munfort",
+    description: "Colección seleccionada de muebles y accesorios para el hogar que combinan funcionalidad y atractivo estético para la vida moderna.",
+    image: "/app/img/munfort.png",
+    technologies: ["React.js", "Tailwind", "TypeScript", "Supabase", "PostgreSQL"],
+    githubLink: "https://github.com/JoseSanchez90/proyecto-muebleria",
+    liveLink: "https://munfort.vercel.app/",
   },
   {
     title: "Empresa Eufrosine",
     description: "Sitio web creado para una pequeña empresa de agua de mesa llamada Eufrosine.",
     image: "/app/img/eufrosine.png",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn/ui", "React Icons", "Lottie", "Motion.dev"],
+    technologies: ["Next.js", "Tailwind", "TypeScript", "Shadcn/ui", "React Icons", "Lottie", "Motion.dev"],
     githubLink: "https://github.com/JoseSanchez90/frontend-eufrosine-web",
     liveLink: "https://eufrosine.vercel.app/",
   },
@@ -83,7 +83,7 @@ const projects = [
     title: "IntelliPOS v1.0",
     description: "Sistema de ventas para restaurantes, retail y bodegas.",
     image: "/app/img/intellipos.png",
-    technologies: ["React.js", "Tailwind CSS", "JavaScript", "SweetAlert2"],
+    technologies: ["React.js", "Tailwind", "JavaScript", "SweetAlert2"],
     githubLink: "https://github.com/JoseSanchez90/Web-Intellipos",
     liveLink: "https://intellipos.vercel.app/",
   },
@@ -91,7 +91,7 @@ const projects = [
     title: "IntelliPOS v2.0",
     description: "Sistema de ventas para restaurantes, retail y bodegas.",
     image: "/app/img/intelli2.png",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn/ui", "Lucide Icons", "Lottie", "Magic UI"],
+    technologies: ["Next.js", "Tailwind", "TypeScript", "Shadcn/ui", "Lucide Icons", "Lottie", "Magic UI"],
     githubLink: "https://github.com/JoseSanchez90/intellipos-web-2025",
     liveLink: "https://intelliposperu.vercel.app/",
   },
@@ -107,7 +107,7 @@ const projects = [
     title: "Web para un Arquitecto",
     description: "Un sitio web de demostración diseñado para un arquitecto.",
     image: "/app/img/arquitectura-web.png",
-    technologies: ["Next.js", "TypeScript", "HTML", "Tailwdincss", "Shadcn/ui"],
+    technologies: ["Next.js", "TypeScript", "HTML", "Tailwdind", "Shadcn/ui"],
     githubLink: "https://github.com/JoseSanchez90/proyecto-aquitectura",
     liveLink: "https://mwtrazo.vercel.app/",
   },
@@ -115,7 +115,7 @@ const projects = [
     title: "Panel Eufrosine",
     description: "Panel de ventas para una micro empresa de agua de mesa (Demo para portafolio). Correo: administrador@empresa.com | Contraseña: Admin$1234",
     image: "/app/img/eufrosine-image.png",
-    technologies: ["Next.js", "TypeScript", "HTML", "CSS", "Tailwdincss", "Shadcn/ui", "React Icons", "Lucide Icons", "PostgreSQL", "Prisma", "NextAuth.js", "Console Neon", "FullStack"],
+    technologies: ["Next.js", "TypeScript", "HTML", "CSS", "Tailwdind", "Shadcn/ui", "React Icons", "Lucide Icons", "PostgreSQL", "Prisma", "NextAuth.js", "Console Neon", "FullStack"],
     githubLink: "https://github.com/JoseSanchez90/eufrosine-dashboard.git",
     liveLink: "https://eufrosinepanel.vercel.app/login",
   },
@@ -242,7 +242,7 @@ export default function Home() {
                   <a href="#projects">View Projects</a>
                 </Button> */}
                 <DownloadButton />
-                <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-black">
+                <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black">
                   <a href="#contact">Contactame</a>
                 </Button>
               </div>
@@ -282,7 +282,7 @@ export default function Home() {
                     <div className="flex justify-between w-full">
                       <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black" size="sm">
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" /> GitHub
+                          <BsGithub className="mr-2 h-4 w-4" /> GitHub
                         </a>
                       </Button>
                       <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
@@ -328,7 +328,7 @@ export default function Home() {
                         <div className="flex justify-between w-full">
                           <Button asChild className="bg-white hover:bg-gray-900 hover:text-white text-black border-2 border-black dark:border-white dark:bg-gray-950 dark:text-white dark:hover:bg-white dark:hover:text-black" size="sm">
                             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                              <Github className="mr-2 h-4 w-4" /> GitHub
+                              <BsGithub className="mr-2 h-4 w-4" /> GitHub
                             </a>
                           </Button>
                           <Button asChild className="border-2 border-black hover:bg-white hover:text-black dark:border-white dark:hover:bg-gray-900 dark:hover:text-white" size="sm">
