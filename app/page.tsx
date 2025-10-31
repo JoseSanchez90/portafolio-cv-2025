@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, useAnimation, useInView } from "framer-motion"
 import AnimatedSpecialties from "@/components/AnimatedSpecialties"
-import Perfil from "../public/app/img/perfil.png"
+import Perfil from "@/public/app/img/perfil.png"
 import ToggleTheme from "@/components/toggle-theme"
 import { Globe, Menu } from "lucide-react"
 import ContactForm from "@/components/ContactForm"
@@ -80,28 +80,12 @@ const projects = [
     liveLink: "https://eufrosine.vercel.app/",
   },
   {
-    title: "IntelliPOS v1.0",
-    description: "Sistema de ventas para restaurantes, retail y bodegas.",
-    image: "/app/img/intellipos.png",
-    technologies: ["React.js", "Tailwind", "JavaScript", "SweetAlert2"],
-    githubLink: "https://github.com/JoseSanchez90/Web-Intellipos",
-    liveLink: "https://intellipos.vercel.app/",
-  },
-  {
-    title: "IntelliPOS v2.0",
+    title: "IntelliPOS",
     description: "Sistema de ventas para restaurantes, retail y bodegas.",
     image: "/app/img/intelli2.png",
     technologies: ["Next.js", "Tailwind", "TypeScript", "Shadcn/ui", "Lucide Icons", "Lottie", "Magic UI"],
     githubLink: "https://github.com/JoseSanchez90/intellipos-web-2025",
     liveLink: "https://intelliposperu.vercel.app/",
-  },
-  {
-    title: "Lista de Tareas",
-    description: "Práctica personal para una lista de tareas.",
-    image: "/app/img/todolist.png",
-    technologies: ["Vue.js", "CSS", "JavaScript"],
-    githubLink: "https://github.com/JoseSanchez90/To-Do-List",
-    liveLink: "https://to-do-list-josesanchez.vercel.app/",
   },
   {
     title: "Web para un Arquitecto",
@@ -177,7 +161,7 @@ export default function Home() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href="https://github.com/JoseSanchez90" target="_blank" rel="noreferrer">
-                    <BsGithub className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                    <BsGithub className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200 hover:text-neutral-400" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent side="top">GitHub</TooltipContent>
@@ -187,7 +171,7 @@ export default function Home() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href="https://www.linkedin.com/in/josesanchez90/" target="_blank" rel="noreferrer">
-                    <BsLinkedin className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                    <BsLinkedin className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200 hover:text-blue-500" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent side="top">LinkedIn</TooltipContent>
@@ -197,7 +181,7 @@ export default function Home() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href="https://api.whatsapp.com/send?phone=51960041583" target="_blank" rel="noreferrer">
-                    <BsWhatsapp className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200" />
+                    <BsWhatsapp className="h-5 w-5 lg:hover:scale-125 lg:transition-all lg:duration-200 hover:text-green-500" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent side="top">WhatsApp</TooltipContent>
@@ -211,7 +195,7 @@ export default function Home() {
             className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:relative top-full left-0 right-0 bg-background md:bg-transparent p-4 md:p-0 gap-4 md:gap-5`}>
             {["Inicio", "Proyectos", "Habilidades", "Experiencia", "Contacto"].map((item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-primary" onClick={() => setMenuOpen(false)}>
+                <a href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-green-600" onClick={() => setMenuOpen(false)}>
                   {item}
                 </a>
               </li>
